@@ -2,12 +2,16 @@ import React from 'react';
 import Logo from '../components/Logo';
 import { IoMailOutline } from "react-icons/io5";
 import { GoLock } from "react-icons/go";
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className='p-6 py-12 flex flex-col min-h-screen w-full'>
-            <div className='mt-16 justify-center items-center flex flex-col'>
+            <div className='mt-7 justify-center items-center flex flex-col'>
                 <Logo width={'80px'} />
                 <p className='font-[700] text-[20px] mb-4'>Admin Login</p>
             </div>
@@ -48,14 +52,14 @@ const Login = () => {
                             id="checkbox"
                             className="hidden peer"
                         />
-                        <span className="w-5 text-white font-bold h-5 border-2 border-[#007BFF] rounded-sm flex items-center justify-center mr-2 peer-checked:bg-[#007BFF]">
-                            ✔
+                        <span className="w-5 h-5 border-2 border-[#007BFF] rounded-sm flex items-center justify-center mr-2 peer-checked:bg-[#007BFF] peer-checked:text-white">
+                            <span className="hidden peer-checked:inline">✔</span>
                         </span>
-                        <p className='text-[15px] self-center '>Remember me</p>
+                        <p className='text-[15px] self-center'>Remember me</p>
                     </label>
                 </div>
 
-                <button className='p-3 rounded-lg text-white font-bold text-[19px] text-main bg-[#007BFF] w-full'>
+                <button onClick={() => navigate('/dashboard')} className='p-3 rounded-lg text-white font-bold text-[19px] text-main bg-[#007BFF] w-full'>
                     Login
                 </button>
             </div>
