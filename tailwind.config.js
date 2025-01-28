@@ -4,12 +4,14 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  mode: 'jit', 
   theme: {
     extend: {
       colors: {
-        main: "#007BFF"
-      }
+        main: '#007BFF',
+        aux: '#999999',
+      },
     },
   },
   plugins: [],
-}
+};
