@@ -4,11 +4,12 @@ import Community from './conponents/Community';
 import Blogs from './conponents/Blogs';
 import Reviews from './conponents/Reviews';
 import { recent_activity } from './util/recent';
+import Navbar from '../../components/Navbar';
 
 const Dashboard = () => {
   return (
     <div className=''>
-
+      {/* <Navbar /> */}
       <div className='flex my-6 rounded-2xl text-[13px]  bg-[#007BFF] text-white w-[88%] m-auto p-4 py-6 items-center gap-4 text-center justify-center' >
         <div className="">
           <Totaluser />

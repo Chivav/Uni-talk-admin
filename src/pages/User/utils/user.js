@@ -1,0 +1,22 @@
+export const users = [
+    { name: 'John Doe', type: 'student', email: 'john@example.com', status: 'Active' },
+    { name: 'Jane Smith', type: 'student', email: 'jane@example.com', status: 'Inactive' },
+    { name: 'Alice Johnson', type: 'student', email: 'alice@example.com', status: 'Active' },
+    { name: 'Bob Williams', type: 'student', email: 'bob@example.com', status: 'Active' },
+    { name: 'Charlie Brown', type: 'student', email: 'charlie@example.com', status: 'Inactive' },
+    { name: 'David Miller', type: 'student', email: 'david@example.com', status: 'Active' },
+    { name: 'Emma Wilson', type: 'student', email: 'emma@example.com', status: 'Inactive' },
+    { name: 'Franklin Harris', type: 'student', email: 'frank@example.com', status: 'Active' },
+    { name: 'Grace Lee', type: 'student', email: 'grace@example.com', status: 'Active' },
+    { name: 'Henry Clark', type: 'student', email: 'henry@example.com', status: 'Inactive' },
+    { name: 'Isabella Adams', type: 'student', email: 'isabella@example.com', status: 'Active' },
+    { name: 'Jack Thompson', type: 'student', email: 'jack@example.com', status: 'Active' },
+    { name: 'Kelly White', type: 'student', email: 'kelly@example.com', status: 'Inactive' },
+    { name: 'Liam Scott', type: 'student', email: 'liam@example.com', status: 'Active' },
+    { name: 'Mia Evans', type: 'student', email: 'mia@example.com', status: 'Active' },
+    { name: 'Noah Baker', type: 'student', email: 'noah@example.com', status: 'Inactive' },
+    { name: 'Olivia Wright', type: 'student', email: 'olivia@example.com', status: 'Active' },
+    { name: 'Patrick Hall', type: 'student', email: 'patrick@example.com', status: 'Active' },
+    { name: 'Quinn Allen', type: 'student', email: 'quinn@example.com', status: 'Inactive' },
+    { name: 'Ryan Martin', type: 'student', email: 'ryan@example.com', status: 'Active' }
+];

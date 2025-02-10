@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { useNavigate } from 'react-router-dom';
 
@@ -6,6 +7,7 @@ const Navbar = () => {
   const menuRef = useRef(null);
   const overlayRef = useRef(null);
   const navigate = useNavigate();
+  const [contentDropdown, setContentDropdown] = useState(false);
 
   const toggleMenu = () => {
     if (menuRef.current && overlayRef.current) {
@@ -14,6 +16,10 @@ const Navbar = () => {
       overlayRef.current.classList.toggle('hidden');
       overlayRef.current.classList.toggle('bg-black/50');
     }
+  };
+
+  const toggleContentDropdown = () => {
+    setContentDropdown(!contentDropdown);
   };
 
   return (
@@ -51,7 +57,7 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => {
-                navigate('/');
+                navigate('/dashboard');
                 toggleMenu();
               }}
               className="hover:text-[#47DC17] transition duration-200"
@@ -70,16 +76,33 @@ const Navbar = () => {
               Admin
             </button>
           </li>
-          <li>
+          <li className="flex flex-col items-center">
             <button
-              onClick={() => {
-                navigate('/content');
-                toggleMenu();
-              }}
-              className="hover:text-[#47DC17] transition duration-200"
+              onClick={toggleContentDropdown}
+              className="hover:text-[#47DC17] transition duration-200 flex items-center gap-2"
             >
               Content
+              {contentDropdown ? <FaChevronUp /> : <FaChevronDown />}
             </button>
+            {contentDropdown && (
+              <ul className="text-white rounded-md shadow-md p-3 flex justify-center items-center flex-col space-y-2 w-full">
+                <li>
+                  <button className="w-full text-left hover:text-[#007BFF] transition duration-200">
+                    Blog
+                  </button>
+                </li>
+                <li>
+                  <button className="w-full text-left hover:text-[#007BFF] transition duration-200">
+                    Resources
+                  </button>
+                </li>
+                <li>
+                  <button className="w-full text-left hover:text-[#007BFF] transition duration-200">
+                    Community
+                  </button>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <button
